@@ -14,6 +14,7 @@ public class MoreCookies implements ModInitializer {
 
 	public static final Cookie PURPLE_COOKIE = new Cookie(new FabricItemSettings(), 2);
 	public static final Cookie GREEN_COOKIE = new Cookie(new FabricItemSettings(), 3);
+	public static final Cookie YELLOW_COOKIE = new Cookie(new FabricItemSettings(), -1);
 
 	@Override
 	public void onInitialize() {
@@ -23,6 +24,7 @@ public class MoreCookies implements ModInitializer {
 	public static void registerItems() {
 		Registry.register(Registry.ITEM, new Identifier(MODID, "purple_cookie"), PURPLE_COOKIE);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "green_cookie"), GREEN_COOKIE);
+		Registry.register(Registry.ITEM, new Identifier(MODID, "yellow_cookie"), YELLOW_COOKIE);
 	}
 
 	public static String createItemModelJson(String id, String type) {
