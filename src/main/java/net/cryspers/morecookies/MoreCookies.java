@@ -4,16 +4,17 @@ import net.cryspers.morecookies.items.Cookie;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 
 public class MoreCookies implements ModInitializer {
 	public static final String MODID = "morecookies";
 
-	public static final Cookie PURPLE_COOKIE = new Cookie(new FabricItemSettings(), 2);
-	public static final Cookie GREEN_COOKIE = new Cookie(new FabricItemSettings(), 3);
-	public static final Cookie YELLOW_COOKIE = new Cookie(new FabricItemSettings(), -1);
-	public static final Cookie BLUE_COOKIE = new Cookie(new FabricItemSettings(), 3);
+	public static final Cookie PURPLE_COOKIE = new Cookie(new FabricItemSettings(), 2, Rarity.COMMON);
+	public static final Cookie GREEN_COOKIE = new Cookie(new FabricItemSettings(), 3, Rarity.COMMON);
+	public static final Cookie YELLOW_COOKIE = new Cookie(new FabricItemSettings(), -1, Rarity.COMMON);
+	public static final Cookie BLUE_COOKIE = new Cookie(new FabricItemSettings(), 3, Rarity.COMMON);
 
 	@Override
 	public void onInitialize() {
