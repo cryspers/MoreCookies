@@ -1,9 +1,7 @@
 {
   "item.morecookies.purple_cookie": "Purple Cookie",
   "item.morecookies.green_cookie": "Green Cookie",
-<<<<<<< HEAD
-  "item.morecookies.yellow_cookie": "Yellow Cookie"
-=======
-  "item.morecookies.blue_cookie": "Blue Cookie"
->>>>>>> d6e06eec684f5377e9af97768f5c36eab42b43a2
+  "item.morecookies.yellow_cookie": "Yellow Cookie",
+
+  "block.morecookies.purple_cookie_block": "Purple Cookie Block"
 }

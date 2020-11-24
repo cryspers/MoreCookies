@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "WWW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "morecookies:purple_cookie"
+    }
+  },
+  "result": {
+    "item": "morecookies:purple_cookie_block"
+  }
+}

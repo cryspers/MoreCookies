@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "morecookies:block/purple_cookie_block"
+  }
+}
