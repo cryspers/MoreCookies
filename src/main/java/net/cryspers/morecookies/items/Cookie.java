@@ -8,9 +8,7 @@ public class Cookie extends Item {
     public Cookie(Settings settings, int setHunger) {
         super(settings
                 .group(ItemGroup.FOOD)
-                .food(new FoodComponent.Builder().hunger(setHunger).build())
+                .food(new FoodComponent.Builder().hunger(setHunger).alwaysEdible().build())
         );
     }
-
-
 }
