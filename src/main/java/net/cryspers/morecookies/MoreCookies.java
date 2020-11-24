@@ -2,14 +2,12 @@ package net.cryspers.morecookies;
 
 import net.cryspers.morecookies.items.Cookie;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.item.v1.EquipmentSlotProvider;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryKey;
+import org.lwjgl.system.CallbackI;
+
 
 public class MoreCookies implements ModInitializer {
 	public static final String MODID = "morecookies";
@@ -19,6 +17,10 @@ public class MoreCookies implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		registerItems();
+	}
+
+	public static void registerItems() {
 		Registry.register(Registry.ITEM, new Identifier(MODID, "purple_cookie"), PURPLE_COOKIE);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "green_cookie"), GREEN_COOKIE);
 	}
