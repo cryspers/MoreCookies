@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "id": "morecookies",
-  "version": "${version}",
+  "version": "0.1-cookie",
 
   "name": "More Cookies",
   "description": "This mod implements MORE COOKIES!",
   "authors": [
     "Pattech",
-    "Crabzzai"
+    "Crabzzai",
+    "t14n"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://cryspers.net/"
   },
 
   "license": "CC0-1.0",

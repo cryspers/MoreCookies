@@ -4,6 +4,7 @@ import net.cryspers.morecookies.blocks.CookieBlock;
 import net.cryspers.morecookies.items.Cookie;
 import net.devtech.arrp.api.RRPCallback;
 import net.devtech.arrp.api.RuntimeResourcePack;
+import net.devtech.arrp.json.lang.JLang;
 import net.devtech.arrp.json.models.JModel;
 import net.devtech.arrp.json.recipe.*;
 import net.fabricmc.api.ModInitializer;
@@ -14,6 +15,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import static net.devtech.arrp.api.RuntimeResourcePack.id;
 import static net.devtech.arrp.json.loot.JLootTable.*;
@@ -25,10 +27,10 @@ public class MoreCookies implements ModInitializer {
 	public static final String MODID = "morecookies";
 	public static final RuntimeResourcePack RESOURCE_PACK = RuntimeResourcePack.create("mymod:test");
 
-	public static final Cookie PURPLE_COOKIE = new Cookie(new FabricItemSettings(), 2);
-	public static final Cookie GREEN_COOKIE = new Cookie(new FabricItemSettings(), 3);
-	public static final Cookie YELLOW_COOKIE = new Cookie(new FabricItemSettings(), -1);
-	public static final Cookie BLUE_COOKIE = new Cookie(new FabricItemSettings(), 3);
+	public static final Cookie PURPLE_COOKIE = new Cookie(new FabricItemSettings(), 2, Rarity.COMMON);
+	public static final Cookie GREEN_COOKIE = new Cookie(new FabricItemSettings(), 3, Rarity.COMMON);
+	public static final Cookie YELLOW_COOKIE = new Cookie(new FabricItemSettings(), -1, Rarity.COMMON);
+	public static final Cookie BLUE_COOKIE = new Cookie(new FabricItemSettings(), 3, Rarity.COMMON);
 
 	public static final CookieBlock PURPLE_COOKIE_BLOCK = new CookieBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT));
 
@@ -66,6 +68,14 @@ public class MoreCookies implements ModInitializer {
 						JKeys.keys().key("W", JIngredient.ingredient().item(myId("purple_cookie").toString())),
 						JResult.result(myId("purple_cookie_block").toString())
 				)
+		);
+
+		RESOURCE_PACK.addLang(myId("en_us"),
+				JLang.lang().item(myId("blue_cookie"),"Blue Cookie")
+				);
+
+		RESOURCE_PACK.addLang(myId("en_us"),
+				JLang.lang().item(myId("yellow_cookie"),"Yellow Cookie")
 		);
 
 		RRPCallback.EVENT.register(a -> a.add(RESOURCE_PACK));
