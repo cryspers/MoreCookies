@@ -5,9 +5,10 @@ import net.cryspers.morecookies.items.Cookie;
 import net.devtech.arrp.api.RRPCallback;
 import net.devtech.arrp.api.RuntimeResourcePack;
 import net.devtech.arrp.json.lang.JLang;
-import net.devtech.arrp.json.models.JModel;
 import net.devtech.arrp.json.recipe.*;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.OverworldBiomes;
+import net.fabricmc.fabric.api.biome.v1.OverworldClimate;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Material;
@@ -16,12 +17,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
-import static net.devtech.arrp.api.RuntimeResourcePack.id;
-import static net.devtech.arrp.json.loot.JLootTable.*;
+import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.biome.Biome;
+
 import static net.devtech.arrp.json.models.JModel.model;
 import static net.devtech.arrp.json.models.JModel.textures;
-import static net.devtech.arrp.json.recipe.JRecipe.*;
 
 public class MoreCookies implements ModInitializer {
 	public static final String MODID = "morecookies";
@@ -34,8 +36,16 @@ public class MoreCookies implements ModInitializer {
 
 	public static final CookieBlock PURPLE_COOKIE_BLOCK = new CookieBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT));
 
+
+	public static final RegistryKey<Biome> OBSILAND_KEY = RegistryKey.of(Registry.BIOME_KEY, myId("obsiland"));
+
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onInitialize() {
+		Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, myId("obsidian"), Biomes.OBSIDIAN_SURFACE_BUILDER);
+		Registry.register(BuiltinRegistries.BIOME, OBSILAND_KEY.getValue(), Biomes.OBSILAND);
+		OverworldBiomes.addContinentalBiome(OBSILAND_KEY, OverworldClimate.TEMPERATE, 2D);
+		OverworldBiomes.addContinentalBiome(OBSILAND_KEY, OverworldClimate.COOL, 2D);
 		registerItems();
 		registerBlocks();
 		setResourcePack();
@@ -54,7 +64,9 @@ public class MoreCookies implements ModInitializer {
 		Registry.register(Registry.BLOCK, myId("purple_cookie_block"), PURPLE_COOKIE_BLOCK);
 	}
 
+	@SuppressWarnings("deprecation")
 	public static void setResourcePack() {
+
 		RESOURCE_PACK.addModel(model("item/generated").textures(textures().layer0(myId("item/purple_cookie").toString())), myId("item/purple_cookie"));
 		RESOURCE_PACK.addModel(model("item/generated").textures(textures().layer0(myId("item/green_cookie").toString())), myId("item/green_cookie"));
 
