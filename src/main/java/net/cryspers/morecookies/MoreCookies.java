@@ -36,16 +36,8 @@ public class MoreCookies implements ModInitializer {
 
 	public static final CookieBlock PURPLE_COOKIE_BLOCK = new CookieBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT));
 
-
-	public static final RegistryKey<Biome> OBSILAND_KEY = RegistryKey.of(Registry.BIOME_KEY, myId("obsiland"));
-
-	@SuppressWarnings("deprecation")
 	@Override
 	public void onInitialize() {
-		Registry.register(BuiltinRegistries.CONFIGURED_SURFACE_BUILDER, myId("obsidian"), Biomes.OBSIDIAN_SURFACE_BUILDER);
-		Registry.register(BuiltinRegistries.BIOME, OBSILAND_KEY.getValue(), Biomes.OBSILAND);
-		OverworldBiomes.addContinentalBiome(OBSILAND_KEY, OverworldClimate.TEMPERATE, 2D);
-		OverworldBiomes.addContinentalBiome(OBSILAND_KEY, OverworldClimate.COOL, 2D);
 		registerItems();
 		registerBlocks();
 		setResourcePack();
