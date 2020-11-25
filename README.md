@@ -1,9 +1,20 @@
-# Fabric Example Mod
+# MoreCookies
 
-## Setup
+## Trello
 
 For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
 
+## Developers
+
+Pattech
+
+Crabzzai
+
+t14n
+
+Wiiben
+
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+You are allowed to read and learn, but not upload
+this project as your own or copy it fully. (Copyright Cryspers) 

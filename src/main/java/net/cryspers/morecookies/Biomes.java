@@ -45,7 +45,7 @@ public class Biomes {
                 .temperature(0.8F)
                 .downfall(0.4F)
                 .effects((new BiomeEffects.Builder())
-                        .waterColor(0x3f76e4)
+                        .waterColor(0x3cc33ff)
                         .waterFogColor(0x050533)
                         .fogColor(0xc0d8ff)
                         .skyColor(0x77adff)
