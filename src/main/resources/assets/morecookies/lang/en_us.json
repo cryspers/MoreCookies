@@ -2,5 +2,6 @@
   "item.morecookies.purple_cookie": "Purple Cookie",
   "item.morecookies.green_cookie": "Green Cookie",
   "item.morecookies.yellow_cookie": "Yellow Cookie",
-  "item.morecookies.blue_cookie": "Blue Cookie"
+
+  "block.morecookies.purple_cookie_block": "Purple Cookie Block"
 }
