@@ -12,6 +12,7 @@ group = project.maven_group
 
 dependencies {
 	// To change the versions see the gradle.properties file
+	modImplementation group: 'net.devtech', name: 'arrp', version: '0.3.0'
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -58,6 +59,12 @@ java {
 jar {
 	from("LICENSE") {
 		rename { "${it}_${project.archivesBaseName}"}
+	}
+}
+
+repositories {
+	maven {
+		url = 'https://raw.githubusercontent.com/Devan-Kerman/Devan-Repo/master/'
 	}
 }
 // configure the maven publication
