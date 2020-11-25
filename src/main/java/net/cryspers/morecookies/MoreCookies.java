@@ -15,6 +15,7 @@ import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.BuiltinRegistries;
@@ -48,6 +49,7 @@ public class MoreCookies implements ModInitializer {
 		Registry.register(Registry.ITEM, myId("green_cookie"), GREEN_COOKIE);
 		Registry.register(Registry.ITEM, myId("yellow_cookie"), YELLOW_COOKIE);
 		Registry.register(Registry.ITEM, myId("blue_cookie"), BLUE_COOKIE);
+
 
 		Registry.register(Registry.ITEM, myId("purple_cookie_block"), new BlockItem(PURPLE_COOKIE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 	}

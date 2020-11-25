@@ -4,6 +4,7 @@
   "package": "net.cryspers.morecookies.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "VanillaCookieMixin"
   ],
   "client": [
     "MoreCookiesMixin"
