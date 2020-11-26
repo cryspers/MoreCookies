@@ -1,6 +1,7 @@
 package net.cryspers.morecookies.mixin;
 
 import net.cryspers.morecookies.items.Cookie;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.Rarity;
@@ -27,6 +28,6 @@ public class VanillaCookieMixin {
         )
     )
     private static Item.Settings adjustItemSettings(Item.Settings settings) {
-        return settings.rarity(Rarity.EPIC);
+        return settings.rarity(Rarity.EPIC).maxCount(16).food(new FoodComponent.Builder().hunger(1).alwaysEdible().build());
     }
 }
